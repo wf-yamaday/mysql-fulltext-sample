@@ -10,12 +10,12 @@ create table `ogura` (
   `below` text,
   `above_kana` text,
   `below_kana` text,
-  PRIMARY KEY (`id`),
-  FULLTEXT(`poet`) WITH PARSER ngram,
-  FULLTEXT(`above`) WITH PARSER ngram,
-  FULLTEXT(`below`) WITH PARSER ngram,
-  FULLTEXT(`above_kana`) WITH PARSER ngram,
-  FULLTEXT(`below_kana`) WITH PARSER ngram
+  PRIMARY KEY (`id`)
+  -- FULLTEXT(`poet`) WITH PARSER ngram,
+  -- FULLTEXT(`above`) WITH PARSER ngram,
+  -- FULLTEXT(`below`) WITH PARSER ngram,
+  -- FULLTEXT(`above_kana`) WITH PARSER ngram,
+  -- FULLTEXT(`below_kana`) WITH PARSER ngram
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `ogura` (`poet`,`above`,`below`,`above_kana`,`below_kana`)
