@@ -6,8 +6,9 @@ services:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - ./conf/:/conf
+      - ./conf/my.cnf:/etc/mysql/conf.d/my.cnf
       - ./data:/docker-entrypoint-initdb.d
+      - ./conf/mecabrc:/usr/lib64/mysql/mecab/etc/mecabrc
     tty: true
     environment:
       TZ: 'Asia/Tokyo'
